@@ -99,14 +99,23 @@ function App() {
       <section id="pricing" className="pricing-section">
         <h2>Wähle dein Speicher-Upgrade</h2>
         <div className="ram-grid">
-          {[4, 8, 16, 32].map((size) => (
+          {[
+            { size: 4, oldPrice: '19,99 €', useCase: 'Leichte Aufgaben' },
+            { size: 8, oldPrice: '39,99 €', useCase: 'Home Office' },
+            { size: 16, oldPrice: '69,99 €', useCase: 'Productivity' },
+            { size: 32, oldPrice: '129,99 €', useCase: 'Gaming' }
+          ].map(({ size, oldPrice, useCase }) => (
             <div key={size} className="ram-card">
+              <div className="sale-badge">SALE</div>
               <div className="ram-icon">
                 <div className="chip-rect"></div>
               </div>
               <h3>{size}GB Virtueller RAM</h3>
-              <p>Optimiert für {size === 32 ? 'Gaming' : size === 16 ? 'Productivity' : size === 8 ? 'Home Office' : 'Leichte Aufgaben'}</p>
-              <div className="price">KOSTENLOS</div>
+              <p>Optimiert für {useCase}</p>
+              <div className="price-container">
+                <span className="old-price">{oldPrice}</span>
+                <span className="new-price">0,00 €</span>
+              </div>
               <button 
                 className="download-btn" 
                 onClick={() => handleDownload(size)}
