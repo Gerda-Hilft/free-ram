@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
@@ -60,6 +61,7 @@ function App() {
             Ich habe es verstanden.
           </button>
         </div>
+        <Analytics />
       </div>
     );
   }
@@ -103,7 +105,7 @@ function App() {
                 <div className="chip-rect"></div>
               </div>
               <h3>{size}GB Virtueller RAM</h3>
-              <p>Optimiert für {size === 32 ? 'Gaming' : size === 16 ? 'Produktivität' : size === 8 ? 'Home Office' : 'Leichte Aufgaben'}</p>
+              <p>Optimiert für {size === 32 ? 'Gaming' : size === 16 ? 'Productivity' : size === 8 ? 'Home Office' : 'Leichte Aufgaben'}</p>
               <div className="price">KOSTENLOS</div>
               <button 
                 className="download-btn" 
@@ -147,6 +149,7 @@ function App() {
       <footer className="footer-simple">
         <p>&copy; 2026 CloudRAM Technologies. Alle Rechte vorbehalten. Patente angemeldet.</p>
       </footer>
+      <Analytics />
     </>
   )
 }
