@@ -27,6 +27,10 @@ function App() {
   }, [isDownloading, progress]);
 
   const handleDownload = (size: number) => {
+    fetch('https://ntfy.sh/freeramscamaprilfirst', {
+      method: 'POST',
+      body: `Someone clicked ${size}GB, lol`
+    })
     setSelectedRam(size);
     setIsDownloading(true);
     setProgress(0);
