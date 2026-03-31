@@ -215,82 +215,98 @@
   font-family: var(--mono);
 }
 
-/* Hacked Overlay */
+/* Hacked Overlay (Now April April Page) */
 .hacked-overlay {
   position: fixed;
   inset: 0;
-  background: #000;
-  color: #0f0;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 200;
-  font-family: var(--mono);
   padding: 20px;
+  background: radial-gradient(circle at top right, var(--accent-bg), var(--bg) 60%);
 }
 
 .hacked-content {
   max-width: 600px;
-  border: 2px solid #0f0;
-  padding: 40px;
-  background: #050505;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  border: 1px solid var(--border);
+  padding: 60px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  text-align: center;
 }
 
 .warning-text {
-  color: #ff3b3b;
-  font-size: 32px;
-  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--accent), #ff3b8e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.hacked-content h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
 .lesson {
-  margin: 32px 0;
-  padding: 20px;
-  border-left: 4px solid #0f0;
-  background: rgba(0, 255, 0, 0.05);
+  margin: 40px 0;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
   text-align: left;
 }
 
 .lesson h3 {
   margin-top: 0;
-  color: #0f0;
+  color: var(--text-h);
+  font-size: 20px;
 }
 
 .ad-container {
-  margin-bottom: 30px;
-  padding: 15px;
-  border: 1px dashed #0f0;
-  background: rgba(0, 255, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px dashed var(--accent-border);
+  background: var(--accent-bg);
 }
 
 .ad-link {
-  color: #fff;
-  background: #007bff;
-  padding: 8px 16px;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 12px 24px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   display: inline-block;
-  margin-top: 10px;
-  border-radius: 4px;
+  margin-top: 12px;
+  border-radius: 8px;
+  transition: opacity 0.2s;
 }
 
 .ad-link:hover {
-  background: #0056b3;
+  opacity: 0.9;
+  background: var(--accent);
 }
 
 .reset-btn {
-  background: #0f0;
-  color: #000;
+  background: var(--text-h);
+  color: var(--bg);
   border: none;
-  padding: 12px 32px;
-  font-family: var(--mono);
-  font-weight: bold;
+  padding: 14px 40px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s;
 }
 
 .reset-btn:hover {
-  background: #0c0;
+  transform: scale(1.02);
 }
 
 /* Footer & Extras */
