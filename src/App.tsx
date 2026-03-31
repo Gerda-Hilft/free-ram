@@ -53,8 +53,8 @@ function App() {
           </div>
           <div className="ad-container">
             <p>Auf der Suche nach ECHTEM Cloud-Speicher?</p>
-            <a href="https://gerda-hilft.space" target="_blank" className="ad-link">
-              Gerda-Hilft.space Cloud Speicher ab 1€!
+            <a href="https://gerda-hilft.space/cloud-pricing" target="_blank" className="ad-link">
+              Gerda-Hilft.space Cloud Pricing
             </a>
           </div>
           <button className="reset-btn" onClick={() => { setIsHacked(false); setProgress(0); setSelectedRam(null); }}>
